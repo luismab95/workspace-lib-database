@@ -1,0 +1,41 @@
+{
+  "name": "lib-database",
+  "version": "1.0.0",
+  "description": "Library for database entities with typeorm for worksapce project.",
+  "main": "src/main.js",
+  "types": "src/main.d.ts",
+  "license": "MIT",
+  "author": "luismab95@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luismab95/worksapce-lib-database.git"
+  },
+  "keywords": [
+    "typescript",
+    "typeorm",
+    "lib-database"
+  ],
+  "scripts": {
+    "start": "tsnd --respawn src/main.ts",
+    "build": "npm run build:clean && npm run build:tsc && npm run build:pack",
+    "build:clean": "rimraf dist; exit 0",
+    "build:tsc": "tsc",
+    "build:pack": "tar -czvf lib-database-1.0.0.tar.gz dist/"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "pg": "^8.14.1",
+    "typeorm": "^0.3.21"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.13",
+    "@types/pg": "^8.11.11",
+    "rimraf": "^6.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=20.12.2",
+    "npm": ">=10.5.0"
+  }
+}
