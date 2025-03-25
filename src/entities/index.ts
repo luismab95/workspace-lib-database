@@ -25,3 +25,4 @@ export { UserRole } from "./security/user-role.entity";
 export { UserType } from "./security/user_type.entity";
 export { UserTypeLogin } from "./security/user-type-login.entity";
 export { User } from "./security/user.entity";
+export { Middleware } from "./security/middleware.entity";

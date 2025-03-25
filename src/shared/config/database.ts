@@ -29,6 +29,7 @@ import {
   EndpointEnv,
   Session,
   Module,
+  Middleware,
 } from "../../entities";
 
 const {
@@ -69,6 +70,7 @@ const entities = [
   RecordEndpointEnv,
   Endpoint,
   EndpointEnv,
+  Middleware,
 ];
 
 export class Database {
