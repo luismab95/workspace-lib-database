@@ -23,10 +23,6 @@ import {
   Parameter,
   UserRole,
   Entities,
-  EndpointVersion,
-  RecordEndpointEnv,
-  Endpoint,
-  EndpointEnv,
   Session,
   Module,
   Middleware,
@@ -66,10 +62,6 @@ const entities = [
   Session,
   UserRole,
   Entities,
-  EndpointVersion,
-  RecordEndpointEnv,
-  Endpoint,
-  EndpointEnv,
   Middleware,
 ];
 

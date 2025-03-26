@@ -1,7 +1,4 @@
 export { AdminAccount } from "./security/admin-account.entity";
-export { EndpointEnv } from "./security/endpoint-env.entity";
-export { EndpointVersion } from "./security/endpoint-version.entity";
-export { Endpoint } from "./security/endpoint.entity";
 export { Entities } from "./security/entity.entity";
 export { LoginAttempt } from "./security/login-attempts.entity";
 export { MenuAction } from "./security/menu-action.entity";
@@ -12,7 +9,6 @@ export { Module } from "./security/module.entity";
 export { OtpUser } from "./security/otp-user.entity";
 export { Parameter } from "./security/parameter.entity";
 export { Permission } from "./security/permission.entity";
-export { RecordEndpointEnv } from "./security/record-endpoint.entity";
 export { ResourceAction } from "./security/resource-action.entity";
 export { Resource } from "./security/resource.entity";
 export { Role } from "./security/role.entity";
