@@ -5,31 +5,14 @@ import {
   Index,
   CreateDateColumn,
   UpdateDateColumn,
-  BeforeInsert,
   OneToMany,
 } from "typeorm";
 import { Menu } from "./menu.entity";
-import { randomCharacters } from "../../shared/helpers/random.helper";
 
 @Entity({ name: "module", schema: "security" })
 export class Module {
   @PrimaryGeneratedColumn()
   id!: number;
-
-  @Index({ unique: true })
-  @Column({
-    name: "code",
-    type: "varchar",
-    unique: true,
-    length: 8,
-    nullable: false,
-  })
-  code!: string;
-
-  @BeforeInsert()
-  randonCode() {
-    this.code = randomCharacters("COMBINED", 8).toUpperCase();
-  }
 
   @Index({ unique: true })
   @Column({

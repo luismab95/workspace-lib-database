@@ -1,32 +1,7 @@
-import { DataSource } from "typeorm";
-import { config } from "../environments/load-env";
 import { Client } from "pg";
-import {
-  ScopeCondition,
-  ScopeTable,
-  MenuAction,
-  Microservice,
-  AdminAccount,
-  ResourceAction,
-  Resource,
-  Permission,
-  Scope,
-  UserType,
-  UserPermission,
-  UserTypeLogin,
-  User,
-  Role,
-  LoginAttempt,
-  MenuRole,
-  Menu,
-  OtpUser,
-  Parameter,
-  UserRole,
-  Entities,
-  Session,
-  Module,
-  Middleware,
-} from "../../entities";
+import { config } from "../environments/load-env";
+import { DataSource } from "typeorm";
+import { User, Menu, OtpUser, Session, Module } from "../../entities";
 
 const {
   dbHost,
@@ -38,32 +13,7 @@ const {
   dbLogging,
 } = config.server;
 
-const entities = [
-  ScopeCondition,
-  ScopeTable,
-  MenuAction,
-  Microservice,
-  AdminAccount,
-  Module,
-  ResourceAction,
-  Resource,
-  Permission,
-  Scope,
-  UserType,
-  UserPermission,
-  UserTypeLogin,
-  User,
-  Role,
-  LoginAttempt,
-  MenuRole,
-  Menu,
-  OtpUser,
-  Parameter,
-  Session,
-  UserRole,
-  Entities,
-  Middleware,
-];
+const entities = [Module, User, Menu, OtpUser, Session];
 
 export class Database {
   private static postgresDataSource: DataSource;

@@ -8,32 +8,13 @@ import {
   JoinColumn,
   ManyToOne,
   OneToMany,
-  BeforeInsert,
 } from "typeorm";
-import { MenuRole } from "./menu-rol.entity";
 import { Module } from "./module.entity";
-import { MenuAction } from "./menu-action.entity";
-import { randomCharacters } from "../../shared/helpers/random.helper";
 
 @Entity({ name: "menu", schema: "security" })
 export class Menu {
   @PrimaryGeneratedColumn()
   id!: number;
-
-  @Index({ unique: true })
-  @Column({
-    name: "code",
-    type: "varchar",
-    unique: true,
-    length: 8,
-    nullable: false,
-  })
-  code!: string;
-
-  @BeforeInsert()
-  randonCode() {
-    this.code = randomCharacters("COMBINED", 8).toUpperCase();
-  }
 
   @Column({
     name: "name",
@@ -140,12 +121,6 @@ export class Menu {
 
   @OneToMany(() => Menu, (menu) => menu.parent)
   children!: Menu[];
-
-  @OneToMany(() => MenuRole, (menuRole) => menuRole.menu)
-  menu!: MenuRole[];
-
-  @OneToMany(() => MenuAction, (menuAction) => menuAction.menu)
-  menuAction!: MenuAction[];
 
   @ManyToOne(() => Module, (module) => module.menu)
   @JoinColumn({ name: "module_id" })

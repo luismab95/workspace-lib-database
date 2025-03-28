@@ -30,11 +30,11 @@ export class Session {
   token!: string;
 
   @Column({
-    name: "detail",
+    name: "information",
     type: "text",
     nullable: false,
   })
-  detail!: string;
+  information!: string;
 
   @Column({
     name: "active",
