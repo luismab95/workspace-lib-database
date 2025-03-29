@@ -1,7 +1,7 @@
 import { Client } from "pg";
 import { config } from "../environments/load-env";
 import { DataSource } from "typeorm";
-import { User, Menu, OtpUser, Session, Module } from "../../entities";
+import { User, OtpUser, Session } from "../../entities";
 
 const {
   dbHost,
@@ -13,7 +13,7 @@ const {
   dbLogging,
 } = config.server;
 
-const entities = [Module, User, Menu, OtpUser, Session];
+const entities = [User, OtpUser, Session];
 
 export class Database {
   private static postgresDataSource: DataSource;
